@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjpracu01fhai"]
+
+[ext_resource type="PackedScene" uid="uid://djl5khg5wqcyt" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_corner.gltf" id="1_ox561"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_843tl"]
+points = PackedVector3Array(4.5, 0.35, 4.5, 4.5, 0.35, 5, 4.64996, 0.499985, 4.64996, 5, 0.35, 4.5, 5, 0.35, 5, 4.64996, 0.499985, 5, 5, 0.499985, 4.64996, 5, 0.499985, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gxipj"]
+points = PackedVector3Array(-4.5, 0.35, 5, -4.65001, 0.499985, 5, -5, 0.35, 5, -4.5, 0.35, -4.50078, -4.65001, 0.499985, -4.65055, -5, 0.499985, 5, -5, 0.35, -5, -5, 0.499985, -5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ebshl"]
+points = PackedVector3Array(-5, 0.35, -5, -4.50078, 0.35, -4.5, -5, 0.499985, -5, 5, 0.35, -5, -4.65055, 0.499985, -4.65001, 5, 0.35, -4.5, 5, 0.499985, -5, 5, 0.499985, -4.65001)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ql654"]
+points = PackedVector3Array(-4.10857, 0.35, -4.1086, -4.50002, 0.35, -3.16358, -4.50002, 0.35, -4.50014, -4.25861, 0.499985, -4.25861, -4.65, 0.499985, -3.31359, -4.65, 0.499985, -4.65)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xyw57"]
+points = PackedVector3Array(-4.65, 0.499985, -4.65, -4.50014, 0.35, -4.50002, -4.25861, 0.499985, -4.25861, -3.31359, 0.499985, -4.65, -3.16358, 0.35, -4.50002, -4.1086, 0.35, -4.10857)
+
+[node name="RoadCorner" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_843tl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_gxipj")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ebshl")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ql654")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_xyw57")
+
+[node name="road_corner" parent="." instance=ExtResource("1_ox561")]

@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://dw0ny4txavqh7"]
+
+[ext_resource type="PackedScene" uid="uid://s0tnsh3ilhip" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_corner_curved.gltf" id="1_hkdvi"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5oao2"]
+points = PackedVector3Array(-5, 0, -5, -5, 0.35, -5, 5, 0, -5, -5, 0, 5, -5, 0.35, 5, 5, 0.35, -5, 5, 0, 5, 5, 0.35, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lbhyu"]
+points = PackedVector3Array(4.5, 0.35, 4.5, 4.5, 0.35, 5, 4.64996, 0.499985, 4.64996, 5, 0.35, 4.5, 5, 0.35, 5, 4.64996, 0.499985, 5, 5, 0.499985, 4.64996, 5, 0.499985, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n2hxk"]
+points = PackedVector3Array(-4.5, 0.35, 5, -4.65001, 0.499985, 5, -5, 0.35, 5, -4.5, 0.35, -4.50078, -4.65001, 0.499985, -4.65055, -5, 0.499985, 5, -5, 0.35, -5, -5, 0.499985, -5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wu14p"]
+points = PackedVector3Array(-5, 0.35, -5, -4.50078, 0.35, -4.5, -5, 0.499985, -5, 5, 0.35, -5, -4.65055, 0.499985, -4.65001, 5, 0.35, -4.5, 5, 0.499985, -5, 5, 0.499985, -4.65001)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ilnut"]
+points = PackedVector3Array(-3.83098, 0.35, -0.676027, -4.5, 0.35, 2.25494, -4.5, 0.35, -4.50061, -3.98106, 0.499985, -0.826091, -4.65, 0.499985, 2.10555, -4.65, 0.499985, -4.65)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vjaok"]
+points = PackedVector3Array(-3.02614, 0.35, -1.95666, -3.83107, 0.35, -0.675537, -4.50011, 0.35, -4.50022, -3.17619, 0.499985, -2.10683, -3.98113, 0.499985, -0.825708, -4.65, 0.499985, -4.65)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cj6xv"]
+points = PackedVector3Array(-4.65, 0.499985, -4.65, -4.50024, 0.35, -4.50024, -3.1764, 0.499985, -2.10647, -2.10647, 0.499985, -3.1764, -1.95644, 0.35, -3.02638, -3.02638, 0.35, -1.95644)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_madn5"]
+points = PackedVector3Array(-4.65, 0.499985, -4.65, -4.50022, 0.35, -4.50011, -2.10683, 0.499985, -3.17619, -0.825707, 0.499985, -3.98113, -0.675537, 0.35, -3.83108, -1.95666, 0.35, -3.02614)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ul0q0"]
+points = PackedVector3Array(-4.65, 0.499985, -4.65, -4.50061, 0.35, -4.5, -0.82609, 0.499985, -3.98106, 2.10555, 0.499985, -4.65, 2.25561, 0.35, -4.5, -0.676027, 0.35, -3.83098)
+
+[node name="RoadCornerCurved" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_5oao2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_lbhyu")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_n2hxk")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_wu14p")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ilnut")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_vjaok")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_cj6xv")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_madn5")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ul0q0")
+
+[node name="road_corner_curved" parent="." instance=ExtResource("1_hkdvi")]

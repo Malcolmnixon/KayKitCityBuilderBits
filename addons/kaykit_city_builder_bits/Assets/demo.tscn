@@ -1,0 +1,148 @@
+[gd_scene load_steps=24 format=3 uid="uid://c182x1vpbp6ys"]
+
+[ext_resource type="PackedScene" uid="uid://4p7rv118mvd3" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_a.tscn" id="1_dcxpa"]
+[ext_resource type="PackedScene" uid="uid://c0c5sreedsgiq" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_c.tscn" id="2_wehod"]
+[ext_resource type="PackedScene" uid="uid://dslf1i32gtjd8" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_g.tscn" id="3_67y0q"]
+[ext_resource type="PackedScene" uid="uid://kclxyl0wsst4" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_b.tscn" id="4_gx4ik"]
+[ext_resource type="PackedScene" uid="uid://be50dd1737dym" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_d.tscn" id="5_gl520"]
+[ext_resource type="PackedScene" uid="uid://ha1smewsegxt" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_e.tscn" id="6_negcs"]
+[ext_resource type="PackedScene" uid="uid://y2e0lnk6u6gm" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_f.tscn" id="7_qfnfv"]
+[ext_resource type="PackedScene" uid="uid://c5gr2kajf7cr7" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_h.tscn" id="8_hg7n0"]
+[ext_resource type="PackedScene" uid="uid://bkfsipnnx7oei" path="res://addons/kaykit_city_builder_bits/Assets/gltf/base.gltf" id="9_fl4f7"]
+[ext_resource type="PackedScene" uid="uid://xwtky3gkpitv" path="res://addons/kaykit_city_builder_bits/Assets/scenes/road_straight_crossing.tscn" id="10_3ji2s"]
+[ext_resource type="PackedScene" uid="uid://cjpracu01fhai" path="res://addons/kaykit_city_builder_bits/Assets/scenes/road_corner.tscn" id="11_doale"]
+[ext_resource type="PackedScene" uid="uid://dsqk0jm8kat6k" path="res://addons/kaykit_city_builder_bits/Assets/scenes/road_tsplit.tscn" id="12_muk7b"]
+[ext_resource type="PackedScene" uid="uid://dv1knew6eg01l" path="res://addons/kaykit_city_builder_bits/Assets/scenes/road_straight.tscn" id="13_y4lqn"]
+[ext_resource type="PackedScene" uid="uid://di3s7wm1e54fm" path="res://addons/kaykit_city_builder_bits/Assets/scenes/road_junction.tscn" id="14_vwhfs"]
+[ext_resource type="PackedScene" uid="uid://dw0ny4txavqh7" path="res://addons/kaykit_city_builder_bits/Assets/scenes/road_corner_curved.tscn" id="15_h23df"]
+[ext_resource type="PackedScene" uid="uid://dnf26m1e1foeb" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_taxi.gltf" id="16_0pcmr"]
+[ext_resource type="PackedScene" uid="uid://ckcdr77l01ori" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_police.gltf" id="17_uhmpb"]
+[ext_resource type="PackedScene" uid="uid://wvctw27xyop3" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_sedan.gltf" id="18_3s4ny"]
+[ext_resource type="PackedScene" uid="uid://bdhnrt8bkqjm1" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_stationwagon.gltf" id="19_km1tf"]
+[ext_resource type="PackedScene" uid="uid://r0ts0rune0c2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_hatchback.gltf" id="20_6f3r1"]
+[ext_resource type="PackedScene" uid="uid://fofevlpk2s7q" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_C.gltf" id="21_35m5j"]
+[ext_resource type="PackedScene" uid="uid://c62hyhh5akd3a" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_B.gltf" id="22_aq5cm"]
+[ext_resource type="PackedScene" uid="uid://byc7t18216mv4" path="res://addons/kaykit_city_builder_bits/Assets/gltf/streetlight.gltf" id="23_36wpi"]
+
+[node name="demo" type="Node3D"]
+
+[node name="Buildings" type="Node3D" parent="."]
+
+[node name="BuildingA" parent="Buildings" instance=ExtResource("1_dcxpa")]
+
+[node name="BuildingC" parent="Buildings" instance=ExtResource("2_wehod")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="BuildingG" parent="Buildings" instance=ExtResource("3_67y0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="BulidingB" parent="Buildings" instance=ExtResource("4_gx4ik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20)
+
+[node name="BulidingB2" parent="Buildings" instance=ExtResource("4_gx4ik")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 40, 0, 0)
+
+[node name="BuildingD" parent="Buildings" instance=ExtResource("5_gl520")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -20)
+
+[node name="BuildingE" parent="Buildings" instance=ExtResource("6_negcs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -20)
+
+[node name="BuildingF" parent="Buildings" instance=ExtResource("7_qfnfv")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 40, 0, -10)
+
+[node name="BuildingH" parent="Buildings" instance=ExtResource("8_hg7n0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -20)
+
+[node name="base" parent="Buildings" instance=ExtResource("9_fl4f7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -20)
+
+[node name="Roads" type="Node3D" parent="."]
+
+[node name="RoadStraightCrossing" parent="Roads" instance=ExtResource("10_3ji2s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 10)
+
+[node name="RoadCorner" parent="Roads" instance=ExtResource("11_doale")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0, 10)
+
+[node name="RoadStraightCrossing2" parent="Roads" instance=ExtResource("10_3ji2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="RoadCorner2" parent="Roads" instance=ExtResource("11_doale")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+
+[node name="RoadTSplit" parent="Roads" instance=ExtResource("12_muk7b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -10)
+
+[node name="RoadStraight" parent="Roads" instance=ExtResource("13_y4lqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+
+[node name="RoadStraight2" parent="Roads" instance=ExtResource("13_y4lqn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, 10)
+
+[node name="RoadStraight3" parent="Roads" instance=ExtResource("13_y4lqn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0, 10)
+
+[node name="RoadJunction" parent="Roads" instance=ExtResource("14_vwhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 10)
+
+[node name="RoadStraightCrossing3" parent="Roads" instance=ExtResource("10_3ji2s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+
+[node name="RoadCornerCurved" parent="Roads" instance=ExtResource("15_h23df")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30, 0, -10)
+
+[node name="RoadStraight4" parent="Roads" instance=ExtResource("13_y4lqn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, -10)
+
+[node name="RoadStraight5" parent="Roads" instance=ExtResource("13_y4lqn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0, -10)
+
+[node name="RoadStraight6" parent="Roads" instance=ExtResource("13_y4lqn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 40, 0, 10)
+
+[node name="Vehicles" type="Node3D" parent="."]
+
+[node name="car_taxi" parent="Vehicles" instance=ExtResource("16_0pcmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0.6, 3)
+
+[node name="car_police" parent="Vehicles" instance=ExtResource("17_uhmpb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.9, 0.6, 11.5)
+
+[node name="car_sedan" parent="Vehicles" instance=ExtResource("18_3s4ny")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0.6, 6.5)
+
+[node name="car_stationwagon" parent="Vehicles" instance=ExtResource("19_km1tf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.4, 0.6, 11.5)
+
+[node name="car_hatchback" parent="Vehicles" instance=ExtResource("20_6f3r1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0.6, 6.5)
+
+[node name="Decorations" type="Node3D" parent="."]
+
+[node name="trafficlight_C" parent="Decorations" instance=ExtResource("21_35m5j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0.5, 5)
+
+[node name="trafficlight_C2" parent="Decorations" instance=ExtResource("21_35m5j")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 0.5, 15)
+
+[node name="trafficlight_C3" parent="Decorations" instance=ExtResource("21_35m5j")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 35, 0.5, 5)
+
+[node name="trafficlight_B" parent="Decorations" instance=ExtResource("22_aq5cm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 0.5, 15)
+
+[node name="streetlight" parent="Decorations" instance=ExtResource("23_36wpi")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15, 0.5, 5)
+
+[node name="streetlight3" parent="Decorations" instance=ExtResource("23_36wpi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 0.5, 5)
+
+[node name="streetlight4" parent="Decorations" instance=ExtResource("23_36wpi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0.5, 5)
+
+[node name="streetlight5" parent="Decorations" instance=ExtResource("23_36wpi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0.5, 5)
+
+[node name="streetlight2" parent="Decorations" instance=ExtResource("23_36wpi")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15, 0.5, -5)

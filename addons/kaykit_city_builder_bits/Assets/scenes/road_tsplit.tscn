@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsqk0jm8kat6k"]
+
+[ext_resource type="PackedScene" uid="uid://cuywcdfj6mt81" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_tsplit.gltf" id="1_fygy1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x7b54"]
+points = PackedVector3Array(-5, 0, -5, -5, 0.35, -5, 5, 0, -5, -5, 0, 5, -5, 0.35, 5, 5, 0.35, -5, 5, 0, 5, 5, 0.35, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_suyja"]
+points = PackedVector3Array(-4.5, 0.35, 5, -4.65001, 0.499985, 5, -5, 0.35, 5, -4.5, 0.35, -5, -4.65001, 0.499985, -5, -5, 0.499985, 5, -5, 0.35, -5, -5, 0.499985, -5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wf25f"]
+points = PackedVector3Array(4.5, 0.35, 4.5, 4.5, 0.35, 5, 4.64996, 0.499985, 4.64996, 5, 0.35, 4.5, 5, 0.35, 5, 4.64996, 0.499985, 5, 5, 0.499985, 4.64996, 5, 0.499985, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8xtg2"]
+points = PackedVector3Array(4.5, 0.35, -5, 4.5, 0.35, -4.5, 4.64996, 0.499985, -5, 5, 0.35, -5, 5, 0.35, -4.5, 4.64996, 0.499985, -4.65001, 5, 0.499985, -5, 5, 0.499985, -4.65001)
+
+[node name="RoadTSplit" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_x7b54")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_suyja")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_wf25f")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_8xtg2")
+
+[node name="road_tsplit" parent="." instance=ExtResource("1_fygy1")]
