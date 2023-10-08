@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://kclxyl0wsst4"]
+[gd_scene load_steps=13 format=3 uid="uid://kclxyl0wsst4"]
 
 [ext_resource type="PackedScene" uid="uid://de18md2umpgkl" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_B.gltf" id="1_vmwi3"]
 
@@ -31,6 +31,9 @@ points = PackedVector3Array(-0.108805, 0.586307, 0.391844, -0.3154, 0.548034, 0.
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j14bl"]
 points = PackedVector3Array(0.333426, 0, 0.205895, 0.249352, 0.150681, 0, 0.0770488, 0.150681, 0.237145, -0.058337, 0, 0.333242, 0.333426, 0, -0.20596, 0.0770488, 0.150681, -0.23721, 0.0328716, 0.261885, 0, -0.201789, 0.150681, 0.146527, -0.300443, 0, 0, -0.058337, 0, -0.333242, -0.201789, 0.150681, -0.146593)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8rh5o"]
+points = PackedVector3Array(-5, 0, -5, -5, 0, 5, -5, 0.5, -5, 5, 0, -5, -5, 0.5, 5, 5, 0, 5, 5, 0.5, -5, 5, 0.5, 5)
 
 [node name="BulidingB" type="StaticBody3D"]
 
@@ -72,5 +75,8 @@ shape = SubResource("ConvexPolygonShape3D_yoe1n")
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.634777, 0.5, -3.85193)
 shape = SubResource("ConvexPolygonShape3D_j14bl")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_8rh5o")
 
 [node name="building_B" parent="." instance=ExtResource("1_vmwi3")]

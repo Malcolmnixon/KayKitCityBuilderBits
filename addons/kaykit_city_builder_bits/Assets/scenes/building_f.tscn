@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://y2e0lnk6u6gm"]
+[gd_scene load_steps=13 format=3 uid="uid://y2e0lnk6u6gm"]
 
 [ext_resource type="PackedScene" uid="uid://sqf154r7fs5u" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F.gltf" id="1_j2qvr"]
 
@@ -31,6 +31,9 @@ points = PackedVector3Array(-0.864526, 0.299971, -0.375, -0.744714, 0, -0.234559
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q0las"]
 points = PackedVector3Array(-5.79357e-05, 1.13272, 0.4977, -0.00181881, 0.777933, 0.44401, 0.392157, 0.49708, 0.392171, 0.392157, 0.648308, 0.392171, 0.35073, 1.13272, 0.362743, 0.110786, 1.53035, 0.341111, -0.236759, 1.13272, 0.445666, -0.392273, 0.49708, 0.392171, 0.245633, 0, 0.245715, 0.392157, 0.49708, -0.392237, 0.499479, 1.13272, -0.0736018, 0.248135, 1.67562, -3.317e-05, -0.0321247, 1.90265, 0.0250094, -0.447324, 1.13272, 0.234022, -0.392273, 0.648308, 0.392171, -0.392273, 0.49708, -0.392237, -0.245749, 0, 0.245715, -0.42295, 0.777933, 0.135509, 0.245633, 0, -0.245782, 0.392157, 0.648308, -0.392237, 0.0843721, 1.13272, -0.497766, 0.35073, 1.13272, -0.362907, 0.0765872, 1.67562, -0.236037, -0.200799, 1.67562, -0.145904, -0.423413, 1.33219, -3.317e-05, -0.447324, 1.13272, -0.234089, -0.245749, 0, -0.245782, -0.392273, 0.648308, -0.392237, -0.236759, 1.13272, -0.445732)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nfggj"]
+points = PackedVector3Array(-5, 0, -5, -5, 0, 5, -5, 0.5, -5, 5, 0, -5, -5, 0.5, 5, 5, 0, 5, 5, 0.5, -5, 5, 0.5, 5)
 
 [node name="BuildingF" type="StaticBody3D"]
 
@@ -73,5 +76,8 @@ shape = SubResource("ConvexPolygonShape3D_q0las")
 [node name="CollisionShape3D12" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.5, 3.5)
 shape = SubResource("ConvexPolygonShape3D_q0las")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_nfggj")
 
 [node name="building_F" parent="." instance=ExtResource("1_j2qvr")]

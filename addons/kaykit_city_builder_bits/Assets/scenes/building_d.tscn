@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://be50dd1737dym"]
+[gd_scene load_steps=11 format=3 uid="uid://be50dd1737dym"]
 
 [ext_resource type="PackedScene" uid="uid://bsl765ued6lxv" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_D.gltf" id="1_fgfi8"]
 
@@ -25,6 +25,9 @@ points = PackedVector3Array(-1.24722, 2.51512, -0.334267, -1.24722, 2.51512, 0.3
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_skjhl"]
 points = PackedVector3Array(-0.108805, 0.586307, 0.391844, -0.3154, 0.548034, 0.391844, -0.0824594, 0.444172, 0.391844, 0.380147, 0.668168, 0.380131, 2.98023e-08, 0.848161, 0.380131, -0.380147, -8.49694e-08, 0.380131, -0.289055, 0.405899, 0.391844, -0.380147, 0.668168, 0.380131, 0.380147, -8.49694e-08, 0.380131, 0.380147, 0.668168, -0.380147, 2.98023e-08, 0.848161, -0.380147, -0.380147, -8.49694e-08, -0.380147, -0.380147, 0.668168, -0.380147, 0.380147, -8.49694e-08, -0.380147)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uaxoh"]
+points = PackedVector3Array(-5, 0, -5, -5, 0, 5, -5, 0.5, -5, 5, 0, -5, -5, 0.5, 5, 5, 0, 5, 5, 0.5, -5, 5, 0.5, 5)
 
 [node name="BuildingD" type="StaticBody3D"]
 
@@ -54,5 +57,8 @@ shape = SubResource("ConvexPolygonShape3D_wy61l")
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.544589, 0, -0.515677, 0, 0.75, 0, 0.515677, 0, 0.544589, 0.524052, 11.5395, -0.264961)
 shape = SubResource("ConvexPolygonShape3D_skjhl")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_uaxoh")
 
 [node name="building_D" parent="." instance=ExtResource("1_fgfi8")]

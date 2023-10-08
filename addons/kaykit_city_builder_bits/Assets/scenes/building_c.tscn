@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0c5sreedsgiq"]
+[gd_scene load_steps=12 format=3 uid="uid://c0c5sreedsgiq"]
 
 [ext_resource type="PackedScene" uid="uid://bwfc4hb83n03f" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_C.gltf" id="1_hejfx"]
 
@@ -28,6 +28,9 @@ points = PackedVector3Array(0.5, 0.878811, 0.499979, 0.452623, 0.388338, 0.51538
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wy61l"]
 points = PackedVector3Array(-1.24722, 2.51512, -0.334267, -1.24722, 2.51512, 0.334023, -1.24722, 2.71023, -0.334267, -0.913192, 2.51512, -0.913192, -0.768156, -4.69387e-06, -0.768156, -0.965933, 0.999816, -0.258819, -0.913192, 2.51512, 0.912948, -1.24722, 2.71023, 0.334023, -0.965933, 0.999816, 0.258819, -0.768156, -4.69387e-06, 0.767912, 0, 3.35, 0, -0.913192, 2.71023, -0.913192, -0.334267, 2.51512, -1.24722, 0.767912, -4.69387e-06, -0.768156, -0.258819, 0.999816, -0.965933, -0.334267, 2.51512, 1.24722, -0.913192, 2.71023, 0.912948, 0.767912, -4.69387e-06, 0.767912, -0.258819, 0.999816, 0.965689, 1.24722, 2.71023, 0.334023, 1.24722, 2.71023, -0.334267, 0.912948, 2.71023, -0.913192, 0.334023, 2.71023, -1.24722, -0.334267, 2.71023, -1.24722, -0.334267, 2.71023, 1.24722, 0.334023, 2.71023, 1.24697, 0.912948, 2.71023, 0.912948, 0.334023, 2.51512, -1.24722, 0.258575, 0.999816, -0.965933, 0.912948, 2.51512, -0.913192, 1.24722, 2.51512, -0.334267, 0.965689, 0.999816, -0.258819, 0.258575, 0.999816, 0.965689, 0.334023, 2.51512, 1.24697, 0.965689, 0.999816, 0.258575, 1.24722, 2.51512, 0.334023, 0.912948, 2.51512, 0.912948)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0kfc1"]
+points = PackedVector3Array(-5, 0, -5, -5, 0, 5, -5, 0.5, -5, 5, 0, -5, -5, 0.5, 5, 5, 0, 5, 5, 0.5, -5, 5, 0.5, 5)
 
 [node name="BuildingC" type="StaticBody3D"]
 
@@ -61,5 +64,8 @@ shape = SubResource("ConvexPolygonShape3D_v32gq")
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -1, 11.535, -1.5)
 shape = SubResource("ConvexPolygonShape3D_wy61l")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_0kfc1")
 
 [node name="building_C" parent="." instance=ExtResource("1_hejfx")]
