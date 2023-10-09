@@ -1,25 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://dv1knew6eg01l"]
 
-[ext_resource type="PackedScene" uid="uid://dfcv8xbfa2ekl" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_straight.gltf" id="1_l5s23"]
+[ext_resource type="ArrayMesh" uid="uid://dj71f8213y06d" path="res://addons/kaykit_city_builder_bits/Assets/mesh/road_straight.mesh" id="1_nx07o"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m1ews"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_56ia6"]
 points = PackedVector3Array(-5, 0, -5, -5, 0.35, -5, 5, 0, -5, -5, 0, 5, -5, 0.35, 5, 5, 0.35, -5, 5, 0, 5, 5, 0.35, 5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2bc5i"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o5v0y"]
 points = PackedVector3Array(-4.5, 0.35, 5, -4.65001, 0.5, 5, -5, 0.35, 5, -4.5, 0.35, -5, -4.65001, 0.5, -5, -5, 0.5, 5, -5, 0.35, -5, -5, 0.5, -5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_skwbm"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ow6i0"]
 points = PackedVector3Array(5, 0.5, 5, 5, 0.35, 5, 5, 0.5, -5, 4.64996, 0.5, 5, 4.5, 0.35, 5, 5, 0.35, -5, 4.64996, 0.5, -5, 4.5, 0.35, -5)
 
-[node name="RoadStraight" type="StaticBody3D"]
+[node name="RoadStraight" type="MeshInstance3D"]
+mesh = ExtResource("1_nx07o")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_m1ews")
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_2bc5i")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_56ia6")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_skwbm")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_o5v0y")
 
-[node name="road_straight" parent="." instance=ExtResource("1_l5s23")]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ow6i0")
