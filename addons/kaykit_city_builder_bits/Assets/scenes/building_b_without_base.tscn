@@ -1,38 +1,37 @@
 [gd_scene load_steps=7 format=3 uid="uid://doabmehl3gjv5"]
 
-[ext_resource type="ArrayMesh" uid="uid://b48wdgmcbhh7w" path="res://addons/kaykit_city_builder_bits/Assets/mesh/building_B_withoutBase.mesh" id="1_8n2gr"]
+[ext_resource type="PackedScene" uid="uid://bqeckh7relpmc" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_B_withoutBase.gltf" id="1_3lilf"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_w3mjl"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jgi47"]
 points = PackedVector3Array(4, 8.0331, 3, 4, 8.03236, -3, -4, 8.0331, 2.99941, 4, 0.5, 3, 4, 0.5, -3, -4, 8.03236, -3, -4, 0.5, 2.99941, -4, 0.5, -3)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_olfhg"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c16dm"]
 points = PackedVector3Array(-3.3657, 7.75, 2.61504, -4, 7.75, 3.24994, -3.3657, 8.03308, 2.61504, 3.36492, 7.75, 2.61504, -4, 8.25, 3.24994, 4, 7.75, 3.24994, -3.49256, 8.25, 2.74245, 3.36492, 8.03308, 2.61504, 4, 8.25, 3.24994, 3.49178, 8.25, 2.74245)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qwh3l"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2ku1g"]
 points = PackedVector3Array(-3.36503, 8.03308, 2.61502, -3.36503, 7.75, 2.61502, -3.36503, 8.03308, -2.61565, -3.49251, 8.25, 2.74227, -4, 8.25, 3.25, -4, 7.75, 3.25, -3.36503, 7.75, -2.61565, -4, 8.25, -3.25, -3.49251, 8.25, -2.7429, -4, 7.75, -3.25)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jn8xo"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xsr84"]
 points = PackedVector3Array(-4, 7.75, -3.25, -3.3657, 7.75, -2.6151, -4, 8.25, -3.25, 4, 7.75, -3.25, -3.3657, 8.03308, -2.6151, 3.36492, 7.75, -2.6151, -3.49256, 8.25, -2.74251, 4, 8.25, -3.25, 3.36492, 8.03308, -2.6151, 3.49178, 8.25, -2.74251)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y3oj2"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7kxdo"]
 points = PackedVector3Array(4, 8.25, 3.25, 4, 7.75, 3.25, 4, 8.25, -3.25, 3.49245, 8.25, 2.74227, 3.36504, 8.03308, 2.61502, 3.36504, 7.75, 2.61502, 4, 7.75, -3.25, 3.36504, 8.03308, -2.61565, 3.49245, 8.25, -2.7429, 3.36504, 7.75, -2.61565)
 
-[node name="BuildingBWithoutBase" type="MeshInstance3D"]
-mesh = ExtResource("1_8n2gr")
+[node name="building_B_withoutBase" instance=ExtResource("1_3lilf")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="building_B_withoutBase2" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_w3mjl")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="building_B_withoutBase2/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_jgi47")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_olfhg")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="building_B_withoutBase2/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_c16dm")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_qwh3l")
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="building_B_withoutBase2/StaticBody3D" index="2"]
+shape = SubResource("ConvexPolygonShape3D_2ku1g")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_jn8xo")
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="building_B_withoutBase2/StaticBody3D" index="3"]
+shape = SubResource("ConvexPolygonShape3D_xsr84")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_y3oj2")
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="building_B_withoutBase2/StaticBody3D" index="4"]
+shape = SubResource("ConvexPolygonShape3D_7kxdo")

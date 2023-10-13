@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://c182x1vpbp6ys"]
 
-[ext_resource type="PackedScene" uid="uid://dnf26m1e1foeb" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_taxi.gltf" id="16_0pcmr"]
-[ext_resource type="PackedScene" uid="uid://ckcdr77l01ori" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_police.gltf" id="17_uhmpb"]
-[ext_resource type="PackedScene" uid="uid://wvctw27xyop3" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_sedan.gltf" id="18_3s4ny"]
-[ext_resource type="PackedScene" uid="uid://bdhnrt8bkqjm1" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_stationwagon.gltf" id="19_km1tf"]
-[ext_resource type="PackedScene" uid="uid://r0ts0rune0c2" path="res://addons/kaykit_city_builder_bits/Assets/gltf/car_hatchback.gltf" id="20_6f3r1"]
+[ext_resource type="PackedScene" uid="uid://0ktj5jihyla8" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_taxi.tscn" id="2_y6aye"]
+[ext_resource type="PackedScene" uid="uid://bn563fpe71c85" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_police.tscn" id="3_wj4vm"]
+[ext_resource type="PackedScene" uid="uid://dh5wvhiau8a2o" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_sedan.tscn" id="4_iq6we"]
+[ext_resource type="PackedScene" uid="uid://dvag6850sin2m" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_stationwagon.tscn" id="5_s5nfc"]
+[ext_resource type="PackedScene" uid="uid://bsfxew3mur6bb" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_hatchback.tscn" id="6_i4fhw"]
 [ext_resource type="PackedScene" uid="uid://fofevlpk2s7q" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_C.gltf" id="21_35m5j"]
 [ext_resource type="PackedScene" uid="uid://c62hyhh5akd3a" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_B.gltf" id="22_aq5cm"]
 [ext_resource type="PackedScene" uid="uid://byc7t18216mv4" path="res://addons/kaykit_city_builder_bits/Assets/gltf/streetlight.gltf" id="23_36wpi"]
@@ -24,19 +24,19 @@ data = {
 
 [node name="Vehicles" type="Node3D" parent="."]
 
-[node name="car_taxi" parent="Vehicles" instance=ExtResource("16_0pcmr")]
+[node name="car_taxi" parent="Vehicles" instance=ExtResource("2_y6aye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0.6, 3)
 
-[node name="car_police" parent="Vehicles" instance=ExtResource("17_uhmpb")]
+[node name="car_police" parent="Vehicles" instance=ExtResource("3_wj4vm")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.9, 0.6, 11.5)
 
-[node name="car_sedan" parent="Vehicles" instance=ExtResource("18_3s4ny")]
+[node name="car_sedan" parent="Vehicles" instance=ExtResource("4_iq6we")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0.6, 6.5)
 
-[node name="car_stationwagon" parent="Vehicles" instance=ExtResource("19_km1tf")]
+[node name="car_stationwagon" parent="Vehicles" instance=ExtResource("5_s5nfc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.4, 0.6, 11.5)
 
-[node name="car_hatchback" parent="Vehicles" instance=ExtResource("20_6f3r1")]
+[node name="car_hatchback" parent="Vehicles" instance=ExtResource("6_i4fhw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0.6, 6.5)
 
 [node name="Decorations" type="Node3D" parent="."]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://b63526wsu7pvr"]
 
-[ext_resource type="PackedScene" uid="uid://bs64d3hcyjvyj" path="res://addons/kaykit_city_builder_bits/Assets/scenes/base.tscn" id="1_olp3g"]
+[ext_resource type="PackedScene" uid="uid://bkfsipnnx7oei" path="res://addons/kaykit_city_builder_bits/Assets/gltf/base.gltf" id="1_xj3kr"]
 [ext_resource type="PackedScene" uid="uid://4p7rv118mvd3" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_a.tscn" id="2_xb0sc"]
 [ext_resource type="PackedScene" uid="uid://dtbkuoo6re0f" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_a_without_base.tscn" id="3_xq47r"]
 [ext_resource type="PackedScene" uid="uid://kclxyl0wsst4" path="res://addons/kaykit_city_builder_bits/Assets/scenes/building_b.tscn" id="4_kq5k5"]
@@ -26,7 +26,7 @@
 
 [node name="MeshLibrary" type="Node3D"]
 
-[node name="Base" parent="." instance=ExtResource("1_olp3g")]
+[node name="base" parent="." instance=ExtResource("1_xj3kr")]
 
 [node name="BuildingA" parent="." instance=ExtResource("2_xb0sc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)

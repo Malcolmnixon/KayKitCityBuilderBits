@@ -1,26 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://xwtky3gkpitv"]
 
-[ext_resource type="ArrayMesh" uid="uid://cd782dk1ba5g5" path="res://addons/kaykit_city_builder_bits/Assets/mesh/road_straight_crossing.mesh" id="1_5kxwe"]
+[ext_resource type="PackedScene" uid="uid://uo53aonh8se4" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_straight_crossing.gltf" id="1_gsybp"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_of6vn"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jh3sn"]
 points = PackedVector3Array(-5, 0, -5, -5, 0.35, -5, 5, 0, -5, -5, 0, 5, -5, 0.35, 5, 5, 0.35, -5, 5, 0, 5, 5, 0.35, 5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pohro"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wney4"]
 points = PackedVector3Array(-4.5, 0.35, 5, -4.65001, 0.5, 5, -5, 0.35, 5, -4.5, 0.35, -5, -4.65001, 0.5, -5, -5, 0.5, 5, -5, 0.35, -5, -5, 0.5, -5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7qfkj"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mtfj1"]
 points = PackedVector3Array(5, 0.5, 5, 5, 0.35, 5, 5, 0.5, -5, 4.64996, 0.5, 5, 4.5, 0.35, 5, 5, 0.35, -5, 4.64996, 0.5, -5, 4.5, 0.35, -5)
 
-[node name="RoadStraightCrossing" type="MeshInstance3D"]
-mesh = ExtResource("1_5kxwe")
+[node name="road_straight_crossing" instance=ExtResource("1_gsybp")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="road_straight_crossing2" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_of6vn")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road_straight_crossing2/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_jh3sn")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_pohro")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="road_straight_crossing2/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_wney4")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_7qfkj")
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="road_straight_crossing2/StaticBody3D" index="2"]
+shape = SubResource("ConvexPolygonShape3D_mtfj1")

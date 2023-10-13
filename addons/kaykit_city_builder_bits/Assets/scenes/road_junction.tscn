@@ -1,38 +1,37 @@
 [gd_scene load_steps=7 format=3 uid="uid://di3s7wm1e54fm"]
 
-[ext_resource type="ArrayMesh" uid="uid://c358661v14kes" path="res://addons/kaykit_city_builder_bits/Assets/mesh/road_junction.mesh" id="1_4o3kt"]
+[ext_resource type="PackedScene" uid="uid://cqvitcaidtpvu" path="res://addons/kaykit_city_builder_bits/Assets/gltf/road_junction.gltf" id="1_vihob"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nfuic"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p7wjb"]
 points = PackedVector3Array(-5, 0, -5, -5, 0.35, -5, 5, 0, -5, -5, 0, 5, -5, 0.35, 5, 5, 0.35, -5, 5, 0, 5, 5, 0.35, 5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rwbxl"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yb6wk"]
 points = PackedVector3Array(-5, 0.35, -5, -5, 0.499985, -5, -4.5, 0.35, -5, -5, 0.35, -4.5, -5, 0.499985, -4.65001, -4.65001, 0.499985, -5, -4.5, 0.35, -4.5, -4.65001, 0.499985, -4.65001)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c220k"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_snkf8"]
 points = PackedVector3Array(4.5, 0.35, -5, 4.5, 0.35, -4.5, 4.64996, 0.499985, -5, 5, 0.35, -5, 5, 0.35, -4.5, 4.64996, 0.499985, -4.65001, 5, 0.499985, -5, 5, 0.499985, -4.65001)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2rd6v"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n465c"]
 points = PackedVector3Array(4.5, 0.35, 4.5, 4.5, 0.35, 5, 4.64996, 0.499985, 4.64996, 5, 0.35, 4.5, 5, 0.35, 5, 4.64996, 0.499985, 5, 5, 0.499985, 4.64996, 5, 0.499985, 5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5biya"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i2fmx"]
 points = PackedVector3Array(-5, 0.35, 4.5, -5, 0.499985, 4.64996, -4.5, 0.35, 4.5, -5, 0.35, 5, -5, 0.499985, 5, -4.65001, 0.499985, 4.64996, -4.5, 0.35, 5, -4.65001, 0.499985, 5)
 
-[node name="RoadJunction" type="MeshInstance3D"]
-mesh = ExtResource("1_4o3kt")
+[node name="road_junction" instance=ExtResource("1_vihob")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="road_junction2" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_nfuic")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road_junction2/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_p7wjb")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_rwbxl")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="road_junction2/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_yb6wk")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_c220k")
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="road_junction2/StaticBody3D" index="2"]
+shape = SubResource("ConvexPolygonShape3D_snkf8")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_2rd6v")
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="road_junction2/StaticBody3D" index="3"]
+shape = SubResource("ConvexPolygonShape3D_n465c")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_5biya")
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="road_junction2/StaticBody3D" index="4"]
+shape = SubResource("ConvexPolygonShape3D_i2fmx")

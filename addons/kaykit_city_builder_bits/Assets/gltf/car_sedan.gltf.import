@@ -37,7 +37,7 @@ _subresources={
 },
 "nodes": {
 "PATH:car_sedan2": {
-"generate/physics": true,
+"decomposition/precision": 10,
 "physics/shape_type": 1
 }
 }

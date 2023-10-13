@@ -30,7 +30,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"citybits_texture": {
+"citybits_texture.003": {
 "use_external/enabled": true,
 "use_external/path": "res://addons/kaykit_city_builder_bits/Assets/texture/citybits_material.tres"
 }

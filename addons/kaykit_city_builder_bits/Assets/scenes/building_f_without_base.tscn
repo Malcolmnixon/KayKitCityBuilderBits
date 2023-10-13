@@ -1,56 +1,55 @@
 [gd_scene load_steps=10 format=3 uid="uid://3m7s4asjljxb"]
 
-[ext_resource type="ArrayMesh" uid="uid://714s0rqk7cvh" path="res://addons/kaykit_city_builder_bits/Assets/mesh/building_F_withoutBase.mesh" id="1_3wljh"]
+[ext_resource type="PackedScene" uid="uid://yoc61xbaljo0" path="res://addons/kaykit_city_builder_bits/Assets/gltf/building_F_withoutBase.gltf" id="1_rfet7"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sm0ec"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1c7df"]
 points = PackedVector3Array(-1, 11.5331, 3, -5, 11.5331, 3, -1, 0.5, 3, -1, 11.532, -3, -5, 11.532, -3, -5, 0.5, 3, -1, 0.5, -3, -5, 0.5, -3)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dfqyj"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qudn5"]
 points = PackedVector3Array(5, 11.5331, 3, 1, 11.5331, 3, 5, 0.5, 3, 5, 11.532, -3, 1, 11.5331, -3, 1, 0.5, 3, 5, 0.5, -3, 1, 0.5, -3)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_viy1k"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ote1h"]
 points = PackedVector3Array(0.999808, 11.5331, 2, -1, 11.5331, 2, 0.999808, 0.5, 1.99951, 0.999808, 11.5331, -3, -1, 11.5331, -3, -1, 0.5, 1.99951, 0.999808, 0.5, -3, -1, 0.5, -3)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a48kt"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3p7db"]
 points = PackedVector3Array(-1, 11.25, 2, -1, 11.5331, 2, 0.999808, 11.25, 2, -1, 11.25, 2.9999, -1, 11.5331, 3, 0.999808, 11.5331, 2, 0.999808, 11.25, 2.9999, 0.999808, 11.5331, 3)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oskdr"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3w4h7"]
 points = PackedVector3Array(-4.3657, 11.25, 2.61504, -5, 11.25, 3.24994, -4.3657, 11.5331, 2.61504, 4.36472, 11.25, 2.61504, -5, 11.75, 3.24994, 5, 11.25, 3.24994, -4.49295, 11.75, 2.74245, 4.36472, 11.5331, 2.61504, 5, 11.75, 3.24994, 4.49197, 11.75, 2.74245)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i36th"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_55c4m"]
 points = PackedVector3Array(-4.36503, 11.5331, 2.61502, -4.36503, 11.25, 2.61502, -4.36503, 11.5331, -2.61565, -4.49251, 11.75, 2.74227, -5, 11.75, 3.25, -5, 11.25, 3.25, -4.36503, 11.25, -2.61565, -5, 11.75, -3.25, -4.49251, 11.75, -2.7429, -5, 11.25, -3.25)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jxkjr"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1dk8x"]
 points = PackedVector3Array(-5, 11.25, -3.25, -4.3657, 11.25, -2.6151, -5, 11.75, -3.25, 5, 11.25, -3.25, -4.3657, 11.5331, -2.6151, 4.36472, 11.25, -2.6151, -4.49295, 11.75, -2.74251, 5, 11.75, -3.25, 4.36472, 11.5331, -2.6151, 4.49197, 11.75, -2.74251)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ffp30"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ntymc"]
 points = PackedVector3Array(5, 11.75, 3.25, 5, 11.25, 3.25, 5, 11.75, -3.25, 4.49245, 11.75, 2.74227, 4.36504, 11.5331, 2.61502, 4.36504, 11.25, 2.61502, 5, 11.25, -3.25, 4.36504, 11.5331, -2.61565, 4.49245, 11.75, -2.7429, 4.36504, 11.25, -2.61565)
 
-[node name="BuildingFWithoutBase" type="MeshInstance3D"]
-mesh = ExtResource("1_3wljh")
+[node name="building_F_withoutBase" instance=ExtResource("1_rfet7")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="building_F_withoutBase2" index="0"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_sm0ec")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_1c7df")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_dfqyj")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_qudn5")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_viy1k")
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="2"]
+shape = SubResource("ConvexPolygonShape3D_ote1h")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_a48kt")
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="3"]
+shape = SubResource("ConvexPolygonShape3D_3p7db")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_oskdr")
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="4"]
+shape = SubResource("ConvexPolygonShape3D_3w4h7")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_i36th")
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="5"]
+shape = SubResource("ConvexPolygonShape3D_55c4m")
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_jxkjr")
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="6"]
+shape = SubResource("ConvexPolygonShape3D_1dk8x")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_ffp30")
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="building_F_withoutBase2/StaticBody3D" index="7"]
+shape = SubResource("ConvexPolygonShape3D_ntymc")
