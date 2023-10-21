@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://gqhd2eno5mig"]
+
+[ext_resource type="PackedScene" uid="uid://cbggd2crmbpml" path="res://addons/kaykit_city_builder_bits/Assets/gltf/streetlight_lit.glb" id="1_nkmln"]
+
+[node name="streetlight_lit" instance=ExtResource("1_nkmln")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1, 4.38793, 0)
+spot_range = 8.0
+spot_angle = 35.0

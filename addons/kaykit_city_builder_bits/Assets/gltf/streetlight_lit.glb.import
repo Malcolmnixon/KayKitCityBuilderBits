@@ -1,0 +1,48 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cbggd2crmbpml"
+path="res://.godot/imported/streetlight_lit.glb-268b816b4c4f21e61c1f8bd4f3b195d0.scn"
+
+[deps]
+
+source_file="res://addons/kaykit_city_builder_bits/Assets/gltf/streetlight_lit.glb"
+dest_files=["res://.godot/imported/streetlight_lit.glb-268b816b4c4f21e61c1f8bd4f3b195d0.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/apply_root_scale=true
+nodes/root_scale=5.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"citybits_emissive": {
+"use_external/enabled": true,
+"use_external/path": "res://addons/kaykit_city_builder_bits/Assets/texture/citybits_emission_material.tres"
+},
+"citybits_texture": {
+"use_external/enabled": true,
+"use_external/path": "res://addons/kaykit_city_builder_bits/Assets/texture/citybits_material.tres"
+}
+},
+"nodes": {
+"PATH:streetlight": {
+"generate/physics": true
+}
+}
+}
+gltf/embedded_image_handling=0

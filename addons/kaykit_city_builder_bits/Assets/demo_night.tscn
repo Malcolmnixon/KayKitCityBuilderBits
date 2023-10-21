@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlxv7ips1qd0v"]
+
+[ext_resource type="MeshLibrary" uid="uid://sm18hjkqb6gq" path="res://addons/kaykit_city_builder_bits/Assets/mesh_library.meshlib" id="1_qe72w"]
+[ext_resource type="PackedScene" uid="uid://0ktj5jihyla8" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_taxi.tscn" id="2_sr8qx"]
+[ext_resource type="PackedScene" uid="uid://bn563fpe71c85" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_police.tscn" id="3_d120w"]
+[ext_resource type="PackedScene" uid="uid://dh5wvhiau8a2o" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_sedan.tscn" id="4_4o2qf"]
+[ext_resource type="PackedScene" uid="uid://dvag6850sin2m" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_stationwagon.tscn" id="5_pcu7k"]
+[ext_resource type="PackedScene" uid="uid://bsfxew3mur6bb" path="res://addons/kaykit_city_builder_bits/Assets/scenes/car_hatchback.tscn" id="6_65rb6"]
+[ext_resource type="PackedScene" uid="uid://fofevlpk2s7q" path="res://addons/kaykit_city_builder_bits/Assets/gltf/trafficlight_C.gltf" id="7_fwy0r"]
+[ext_resource type="PackedScene" uid="uid://c0biwnsk1amte" path="res://addons/kaykit_city_builder_bits/Assets/scenes/trafficlight_b_lit.tscn" id="8_wlt2t"]
+[ext_resource type="PackedScene" uid="uid://gqhd2eno5mig" path="res://addons/kaykit_city_builder_bits/Assets/scenes/streetlight_lit.tscn" id="9_60u3s"]
+
+[sub_resource type="Environment" id="Environment_iall5"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.231373, 0.231373, 0.231373, 1)
+
+[node name="demo_night" type="Node3D"]
+
+[node name="City" type="GridMap" parent="."]
+mesh_library = ExtResource("1_qe72w")
+cell_size = Vector3(10, 16, 10)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65535, 65534, 34, 65535, 65535, 17, 65535, 1, 1048593, 0, 65534, 20, 0, 65535, 1048598, 65535, 0, 21, 0, 1, 1441813, 1, 1, 1441812, 2, 1, 1441812, 1, 65535, 1441812, 2, 65535, 1441812, 3, 65535, 1441810, 3, 0, 655381, 3, 1, 655379, 4, 1, 1048596, 0, 0, 31, 1, 0, 29, 2, 0, 33, 1, 65534, 1441830, 2, 65534, 32, 3, 65534, 35, 4, 65535, 1441828, 4, 0, 1441824, 4, 65534, 1441792)
+}
+
+[node name="Vehicles" type="Node3D" parent="."]
+
+[node name="car_taxi" parent="Vehicles" instance=ExtResource("2_sr8qx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 0.6, 3)
+
+[node name="car_police" parent="Vehicles" instance=ExtResource("3_d120w")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.9, 0.6, 11.5)
+
+[node name="car_sedan" parent="Vehicles" instance=ExtResource("4_4o2qf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0.6, 6.5)
+
+[node name="car_stationwagon" parent="Vehicles" instance=ExtResource("5_pcu7k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.4, 0.6, 11.5)
+
+[node name="car_hatchback" parent="Vehicles" instance=ExtResource("6_65rb6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0.6, 6.5)
+
+[node name="Decorations" type="Node3D" parent="."]
+
+[node name="trafficlight_C" parent="Decorations" instance=ExtResource("7_fwy0r")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0.5, 5)
+
+[node name="trafficlight_C2" parent="Decorations" instance=ExtResource("7_fwy0r")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 25, 0.5, 15)
+
+[node name="trafficlight_C3" parent="Decorations" instance=ExtResource("7_fwy0r")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 35, 0.5, 5)
+
+[node name="trafficlight_B_lit" parent="Decorations" instance=ExtResource("8_wlt2t")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 0.5, 15)
+
+[node name="streetlight_lit" parent="Decorations" instance=ExtResource("9_60u3s")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15, 0.5, 5)
+
+[node name="streetlight_lit3" parent="Decorations" instance=ExtResource("9_60u3s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 0.5, 5)
+
+[node name="streetlight_lit4" parent="Decorations" instance=ExtResource("9_60u3s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0.5, 5)
+
+[node name="streetlight_lit5" parent="Decorations" instance=ExtResource("9_60u3s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25, 0.5, 5)
+
+[node name="streetlight_lit2" parent="Decorations" instance=ExtResource("9_60u3s")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15, 0.5, -5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_iall5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+visible = false
